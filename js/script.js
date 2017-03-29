@@ -1,7 +1,7 @@
 'use strict';
 
 function rand(from, to) {
-return Math.floor((to - from + 1) * Math.random()) + from;
+  return Math.floor((to - from + 1) * Math.random()) + from;
 } // взлет случайного шарика
 
 function getRandomBubble() {
@@ -85,6 +85,7 @@ function startTimer() {
   showTimer(GAME_TIMEOUT);
   startedAt = Date.now();
   startTimer.interval = setInterval(updateTimer, 500);
+}
 
 function updateTimer() {
   if (!isGameStarted) {
@@ -100,6 +101,7 @@ function updateTimer() {
 function showTimer(timeout) {
   timer.innerHTML = timeToString(timeout);
 }
+
 function startGame() {
   resetPoints();
   isGameStarted = true;
